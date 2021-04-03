@@ -5,7 +5,7 @@
 
 ## Table of Contents
 * [Overview](https://github.com/rkaysen63/PyBer_Analysis/blob/master/README.md#overview)
-* [Resources](https://github.com/rkaysen63/PyBer_Analysis_Analysis/blob/master/README.md#resources)
+* [Resources](https://github.com/rkaysen63/PyBer_Analysis/blob/master/README.md#resources)
 * [Results](https://github.com/rkaysen63/PyBer_Analysis/blob/master/README.md#results)
 * [Summary](https://github.com/rkaysen63/PyBer_Analysis/blob/master/README.md#summary)
 
@@ -20,19 +20,26 @@ The CEO of PyBer, a ride-sharing app company, has requested visualizations of ri
   * ride_data.csv
 * Software: Python 3.7.9 in Jupyter Notebook interface
 * Lesson Plan: UTA-VIRT-DATA-PT-02-2021-U-B-TTH, Module 5 Challenge
-* Readme Markdown Help:
-  * Reference resizing images: https://gist.github.com/DavidWells/7d2e0e1bc78f4ac59a123ddf8b74932d
 
 ## Results:
+<p align="center">
+  <img src="analysis/PyBer_Summary.png" width="700">
+</p>
 
 There is a description of the differences in ride-sharing data among the different city types. Ride-sharing data include the total rides, total drivers, total fares, average fare per ride and driver, and total fare by city type. (7 pt)
 
 ### Total Rides by City Type
-
+<p align="center">
+  <img src="analysis/Fig6.png" width="700">
+</p>
 ### Total Drivers by City Type
-
+<p align="center">
+  <img src="analysis/Fig7.png" width="700">
+</p>
 ### Total Fares by City Type
-
+<p align="center">
+  <img src="analysis/Fig5.png" width="700">
+</p>
 ### Average Fare per Ride per City Type
 
 ### Total Fare per City Type
