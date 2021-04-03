@@ -1,28 +1,34 @@
 # PyBer_Analysis
+<p align="center">
+  <img src="analysis/Fig1.png" width="700">
+</p>
 
-Overview
-Results
-Summary
+## Table of Contents
+* [Overview](https://github.com/rkaysen63/PyBer_Analysis/blob/master/README.md#overview)
+* [Resources](https://github.com/rkaysen63/PyBer_Analysis_Analysis/blob/master/README.md#resources)
+* [Results](https://github.com/rkaysen63/PyBer_Analysis/blob/master/README.md#results)
+* [Summary](https://github.com/rkaysen63/PyBer_Analysis/blob/master/README.md#summary)
+
+## Overview:
+
+The CEO of PyBer, a ride-sharing app company, has requested visualizations of ride-share data among different city types, in order to understand and improve ride-share access and affordability in underserved areas.  Cities were broken into 3 types:  Urban, Suburban, and Rural.   Ride-sharing data was analyzed to determine the total rides, total drivers, total fares, average fare per ride and driver, and total fare by city type.
+
+## Resources
+
+* Data Sources:
+  * city_data.csv
+  * ride_data.csv
+* Software: Python 3.7.9 in Jupyter Notebook interface
+* Lesson Plan: UTA-VIRT-DATA-PT-02-2021-U-B-TTH, Module 5 Challenge
+* Readme Markdown Help:
+  * Reference resizing images: https://gist.github.com/DavidWells/7d2e0e1bc78f4ac59a123ddf8b74932d
 
 
-Overview of the analysis:
-
-The CEO of PyBer, a ride-sharing app company, has requested visualizations of ride-share data among different city types, to help determine ride-share access and affordability in underserved areas.  Cities were broken into 3 types:  Urban, Suburban, and Rural.   Ride-sharing data include the total rides, total drivers, total fares, average fare per ride and driver, and total fare by city type.
-
-The purpose of the new analysis is well defined. (3 pt)
-
-Project Overview:
-	· PyBer - a ride-sharing app company valued at $2.3 billion
-	· Relationships between the city and the number of drivers and riders
-	· Percentage of total fares for drivers and riders by city.
-Visualizations to help PyBer determine ride share access and affordability for underserved neighborhoods.![image](https://user-images.githubusercontent.com/78395913/113489661-1e9e7c00-948b-11eb-8f11-819802ee1d98.png)
-
-
-Results:
+## Results:
 
 There is a description of the differences in ride-sharing data among the different city types. Ride-sharing data include the total rides, total drivers, total fares, average fare per ride and driver, and total fare by city type. (7 pt)
 
-Summary:
+## Summary:
 
 There is a statement summarizing three business recommendations to the CEO for addressing any disparities among the city types. (4 pt)
 
