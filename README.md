@@ -1,6 +1,6 @@
 # PyBer_Analysis
 <p align="center">
-  <img src="analysis/Fig1.png" width="700">
+  <img src="analysis/Fig1.png" width="500">
 </p>
 
 ## Table of Contents
@@ -23,10 +23,19 @@ The CEO of PyBer, a ride-sharing app company, has requested visualizations of ri
 * Readme Markdown Help:
   * Reference resizing images: https://gist.github.com/DavidWells/7d2e0e1bc78f4ac59a123ddf8b74932d
 
-
 ## Results:
 
 There is a description of the differences in ride-sharing data among the different city types. Ride-sharing data include the total rides, total drivers, total fares, average fare per ride and driver, and total fare by city type. (7 pt)
+
+### Total Rides by City Type
+
+### Total Drivers by City Type
+
+### Total Fares by City Type
+
+### Average Fare per Ride per City Type
+
+### Total Fare per City Type
 
 ## Summary:
 
