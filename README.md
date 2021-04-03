@@ -28,18 +28,18 @@ The CEO of PyBer, a ride-sharing app company, has requested visualizations of ri
 
 There is a description of the differences in ride-sharing data among the different city types. Ride-sharing data include the total rides, total drivers, total fares, average fare per ride and driver, and total fare by city type. (7 pt)
 
-### Total Rides by City Type
 <p align="center">
   <img src="analysis/Fig6.png" width="700">
 </p>
+
+
+
+### Total Rides by City Type
+  
 ### Total Drivers by City Type
-<p align="center">
-  <img src="analysis/Fig7.png" width="700">
-</p>
+  
 ### Total Fares by City Type
-<p align="center">
-  <img src="analysis/Fig5.png" width="700">
-</p>
+  
 ### Average Fare per Ride per City Type
 
 ### Total Fare per City Type
