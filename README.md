@@ -24,13 +24,13 @@ The CEO of PyBer, a ride-sharing app company, has requested visualizations of ri
 ## Results:
 
 <p align="center">
-  <img src="analysis/pie_charts.png" width="800">
+  <img src="analysis/box_whiskers.png" width="800">
 </p>
 
 <p align="center">
-  <img src="analysis/box_whiskers.png" width="800">
+  <img src="analysis/pie_charts.png" width="800">
 </p>
-  
+
 <p align="center">
   <img src="analysis/PyBer_Summary.png" width="900">
 </p>
@@ -65,8 +65,13 @@ The CEO of PyBer, a ride-sharing app company, has requested visualizations of ri
     Then pyber_summary was reformatted for presentation purposes.
 
 <p align="center">
-  <img src="PyBer_Challenge.ipynb" width="900">
-</p>    
+  <img src="analysis/pivot.png" width="900">
+</p>   
+
+<p align="center">
+  <img src="analysis/fare_by_type.png" width="900">
+</p>   
+
 
 
 ## Summary:
