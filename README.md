@@ -61,7 +61,6 @@ The CEO of PyBer, a ride-sharing app company, has requested visualizations of ri
     `avg_fare_per_driver = total_fares/total_drivers` 
     
   * The series were combined into  a new dataframe using Pandas `pd.DataFrame()`.  
-     ```pyber_summary_df = pd.DataFrame({"Total Rides": total_rides,  "Total Drivers": total_drivers,   "Total Fares": total_fares,   "Average Fare per Ride": avg_fare_per_ride,   "Average Fare per Driver": avg_fare_per_driver})```    
        
          pyber_summary_df = pd.DataFrame({"Total Rides": total_rides,  
              "Total Drivers": total_drivers,   
