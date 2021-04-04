@@ -76,7 +76,8 @@ The CEO of PyBer, a ride-sharing app company, has requested visualizations of ri
 <p align="center">
   <img src="analysis/fare_by_type.png" width="900">
 </p>   
-  * Creating the type_date_df  
+  
+  * Creating the type_date_df    
     A DataFrame was created using the groupby() function on the "type" and "date" columns, and the sum() method is applied on the "fare" column to show the total fare amount for each date and time. (10 pt)  
       
   * Creating the type_date_df_pivot    
@@ -96,4 +97,4 @@ One obvious reason for the disparity in ride-share data among city types is popu
 2. Identify peak and off-peak "seasons" and offer incentives such a fare specials to boost use.
 3. Coordinate with event centers, such a concert venues, ball parks, hotels and resorts in underserved areas to develop mutually beneficial relationship to advertise and incentivize in order to boost ride-share to and from events and lodging.
 
-* [Back to the Top](https://github.com/rkaysen63/PyBer_Analysis/blob/master/README.md#PyBer-Analysis)
+* [Back to the Table of Contents](https://github.com/rkaysen63/PyBer_Analysis/blob/master/README.md#table-of-contents)
