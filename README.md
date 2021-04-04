@@ -28,7 +28,7 @@ The CEO of PyBer, a ride-sharing app company, has requested visualizations of ri
 </p>
   
 <p align="center">
-  <img src="analysis/PyBer_Summary.png" width="1000">
+  <img src="analysis/PyBer_Summary.png" width="900">
 </p>
 
 * The ride-share data came from two sources:  city_data.csv and ride_data.csv.  Before any analysis could be performed, the data had to be checked for missing data that would result in errors or a bad analysis. Pandas was imported so that the data sources could be read as Pandas dataframes. The subsequent dataframes, ride_data_df and city_data_df, were then checked for null values and in both cases no null values were found.  Verified clean, the dataframes were combined into a single dataframe, pyber_data_df, which was used, to gather the totals for *PyBer Summary*.
