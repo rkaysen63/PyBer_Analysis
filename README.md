@@ -60,8 +60,14 @@ The CEO of PyBer, a ride-sharing app company, has requested visualizations of ri
     The average fare per driver, similarly, is the total fares divided by total drivers.  And since total_fares and total_drivers are indexed by city type, the average fares will be displayed as a series indexed by city type.  
     `avg_fare_per_driver = total_fares/total_drivers` 
     
-  * The series were combined into a new dataframe using Pandas `pd.DataFrame()`.  
-     ```pyber_summary_df = pd.DataFrame({"Total Rides": total_rides,  "Total Drivers": total_drivers,   "Total Fares": total_fares,   "Average Fare per Ride": avg_fare_per_ride,   "Average Fare per Driver": avg_fare_per_driver})```  
+  * The series were combined into  a new dataframe using Pandas `pd.DataFrame()`.  
+     ```pyber_summary_df = pd.DataFrame({"Total Rides": total_rides,  "Total Drivers": total_drivers,   "Total Fares": total_fares,   "Average Fare per Ride": avg_fare_per_ride,   "Average Fare per Driver": avg_fare_per_driver})```    
+       
+         pyber_summary_df = pd.DataFrame({"Total Rides": total_rides,  
+             "Total Drivers": total_drivers,   
+             "Total Fares": total_fares,   
+             "Average Fare per Ride": avg_fare_per_ride,   
+             "Average Fare per Driver": avg_fare_per_driver}) 
     Then pyber_summary was reformatted for presentation purposes.
 
 <p align="center">
@@ -72,21 +78,23 @@ The CEO of PyBer, a ride-sharing app company, has requested visualizations of ri
   <img src="analysis/fare_by_type.png" width="900">
 </p>   
   * Creating the type_date_df  
-    A DataFrame was created using the groupby() function on the "type" and "date" columns, and the sum() method is applied on the "fare" column to show the total fare amount for each date and time. (10 pt)
-  * Creating the type_date_df_pivot  
+    A DataFrame was created using the groupby() function on the "type" and "date" columns, and the sum() method is applied on the "fare" column to show the total fare amount for each date and time. (10 pt)  
+      
+  * Creating the type_date_df_pivot    
     A DataFrame was created using the pivot() function where the index is the "date," the columns are the city "type," and the values are the "fare." (10 pt)
+      
   * Creating the weekly_fares_Jan_April_df  
-    A DataFrame was created using the loc method on the date range: 2019-01-01 through 2019-04-29. (5 pt)
-A DataFrame was created using the resample() function in weekly bins and shows the sum of the fares for each week. (10 pt)
-  *  An annotated chart showing the total fares by city type is created and saved to the "analysis" folder. (10 pt)
+    A DataFrame was created using the loc method on the date range: 2019-01-01 through 2019-04-29. (5 pt)  
+A DataFrame was created using the resample() function in weekly bins and shows the sum of the fares for each week. (10 pt)  
+  
+  *  An annotated chart showing the total fares by city type is created and saved to the "analysis" folder. (10 pt)  
 
 ## Summary:
 
-There is a statement summarizing three business recommendations to the CEO for addressing any disparities among the city types. (4 pt)
+One obvious reason for the disparity in ride-share data among city types is population density, which cannot be helped.  That aside there still may be ways to address the disparities and improve ride-share use in underserved areas.
 
-Summary:
-
-There is a statement summarizing three business recommendations to the CEO for addressing any disparities among the city types. (4 pt)
-
+1. Increase advertising to local patrons in rural and suburban areas through social media outlets.
+2. Identify peak and off-peak "seasons" and offer incentives such a fare specials to boost use.
+3. Coordinate with event centers, such a concert venues, ball parks, hotels and resorts in underserved areas to develop mutually beneficial relationship to advertise and incentivize in order to boost ride-share to and from events and lodging.
 
 * [Back to the Top](https://github.com/rkaysen63/PyBer_Analysis/blob/master/README.md#PyBer-Analysis)
