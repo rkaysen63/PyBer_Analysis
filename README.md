@@ -41,15 +41,15 @@ The CEO of PyBer, a ride-sharing app company, has requested visualizations of ri
 
   * *PyBer Summary* dataframe, shown in the image above, was created from five Series.
   * Total Rides by City Type  
-    The total_rides by city series was created using the groupby() function on the pyber_data_df to sort the data by city "type" and count the number of rides, "ride_id", for each city type.  
+    The total_rides by city series was created using the `groupby()` function on the pyber_data_df to sort the data by city "type" and count the number of rides, "ride_id", for each city type.  
     `total_rides = pyber_data_df.groupby(["type"]).count()["ride_id"]`
   
   * Total Drivers by City Type  
-    The total_drivers by city series was created using the groupby() function on the city_data_df to sort the data by city "type" and sum the number of drivers, "driver_count", for each city type.  It is important to note that the original city_data_df was used to sum the driver counts because the merged data_frame included in the driver_count on each row where a city was listed.  Therefore, the sum of "driver_count" for each city type in pyber_data_df be incorrect because the driver_count by city would be repeated for however many times that city appeared in the data frame.   
+    The total_drivers by city series was created using the `groupby()` function on the city_data_df to sort the data by city "type" and sum the number of drivers, "driver_count", for each city type.  It is important to note that the original city_data_df was used to sum the driver counts because the merged data_frame included in the driver_count on each row where a city was listed.  Therefore, the sum of "driver_count" for each city type in pyber_data_df would be incorrect because the driver_count by city would be repeated for however many times that city appeared in the data frame.   
     `total_drivers = city_data_df.groupby(["type"]).sum()["driver_count"]`  
   
   * Total Fares by City Type  
-    The total_fares by city series was created using the groupby() function on the pyber_data_df to sort the data by city "type" and sum the fares, "fare", for each city type.  
+    The total_fares by city series was created using the `groupby()` function on the pyber_data_df to sort the data by city "type" and sum the fares, "fare", for each city type.  
     `total_fares = pyber_data_df.groupby(["type"]).sum()["fare"]`  
     
   * Average Fare per Ride per City Type  
@@ -71,38 +71,22 @@ The CEO of PyBer, a ride-sharing app company, has requested visualizations of ri
 <p align="center">
   <img src="analysis/fare_by_type.png" width="900">
 </p>   
-
-
+  * Creating the type_date_df  
+    A DataFrame was created using the groupby() function on the "type" and "date" columns, and the sum() method is applied on the "fare" column to show the total fare amount for each date and time. (10 pt)
+  * Creating the type_date_df_pivot  
+    A DataFrame was created using the pivot() function where the index is the "date," the columns are the city "type," and the values are the "fare." (10 pt)
+  * Creating the weekly_fares_Jan_April_df  
+    A DataFrame was created using the loc method on the date range: 2019-01-01 through 2019-04-29. (5 pt)
+A DataFrame was created using the resample() function in weekly bins and shows the sum of the fares for each week. (10 pt)
+  *  An annotated chart showing the total fares by city type is created and saved to the "analysis" folder. (10 pt)
 
 ## Summary:
 
 There is a statement summarizing three business recommendations to the CEO for addressing any disparities among the city types. (4 pt)
 
-Deliverable 2 Requirements
-You will earn a perfect score for Deliverable 2 by completing all requirements below:
-
-A DataFrame was created using the groupby() function on the "type" and "date" columns, and the sum() method is applied on the "fare" column to show the total fare amount for each date and time. (10 pt)
-A DataFrame was created using the pivot() function where the index is the "date," the columns are the city "type," and the values are the "fare." (10 pt)
-A DataFrame was created using the loc method on the date range: 2019-01-01 through 2019-04-29. (5 pt)
-A DataFrame was created using the resample() function in weekly bins and shows the sum of the fares for each week. (10 pt)
-An annotated chart showing the total fares by city type is created and saved to the "analysis" folder. (10 pt)
-
-Deliverable 3 Requirements
-Structure, Organization, and Formatting (6 points)
-The written analysis has the following structure, organization, and formatting:
-
-There is a title, and there are multiple sections. (2 pt)
-Each section has a heading and subheading. (2 pt)
-Links to images are working and displayed correctly. (2 pt)
-Analysis (14 points)
-The written analysis has the following:
-
-Overview of the analysis:
-
-The purpose of the new analysis is well defined. (3 pt)
-Results:
-
-There is a description of the differences in ride-sharing data among the different city types. Ride-sharing data include the total rides, total drivers, total fares, average fare per ride and driver, and total fare by city type. (7 pt)
 Summary:
 
 There is a statement summarizing three business recommendations to the CEO for addressing any disparities among the city types. (4 pt)
+
+
+* [Back to the Top](https://github.com/rkaysen63/PyBer_Analysis/blob/master/README.md#PyBer-Analysis)
