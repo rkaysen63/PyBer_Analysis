@@ -35,29 +35,30 @@ The CEO of PyBer, a ride-sharing app company, has requested visualizations of ri
 
 * *PyBer Summary* dataframe, shown in the image above, was created from five Series.
   * Total Rides by City Type  
-    The total_rides by city series was created using the groupby() function on the pyber_data_df to sort the data by city "type" and count the number of rides, "ride_id" for each city type.
+    The total_rides by city series was created using the groupby() function on the pyber_data_df to sort the data by city "type" and count the number of rides, "ride_id", for each city type.  
     `total_rides = pyber_data_df.groupby(["type"]).count()["ride_id"]`
   
   * Total Drivers by City Type  
-    The total_drivers by city series was created using the groupby() function on the city_data_df to sort the data by city "type" and sum the number of drivers, "driver_count", for each city type.  It is important to note that the original city_data_df was used to sum the driver counts because the merged data_frame brought in the driver_count onto each row where a city was listed.  Therefore, the sum the number of drivers in pyber_data_df would actually be the sum times a multiple of however many times that city appeared in the data frame.  
+    The total_drivers by city series was created using the groupby() function on the city_data_df to sort the data by city "type" and sum the number of drivers, "driver_count", for each city type.  It is important to note that the original city_data_df was used to sum the driver counts because the merged data_frame included in the driver_count on each row where a city was listed.  Therefore, the "driver_count" for each city in pyber_data_df would be multiplied by however many times that city appeared in the data frame.   
     `total_drivers = city_data_df.groupby(["type"]).sum()["driver_count"]`  
   
   * Total Fares by City Type  
-    The total_fares by city series was created using the groupby() function on the pyber_data_df to sort the data by city "type" and sum the fares, "fare", for each city type.
+    The total_fares by city series was created using the groupby() function on the pyber_data_df to sort the data by city "type" and sum the fares, "fare", for each city type.  
     `total_fares = pyber_data_df.groupby(["type"]).sum()["fare"]`  
     
   * Average Fare per Ride per City Type  
-    The average fare per rider is the total fares divided by total rides.  And since each series is indexed by city type, the averages will be displayed as a series indexed by city type. 
+    The average fare per rider is the total fares divided by total rides.  And since each series is indexed by city type, the averages will be displayed as a series indexed by city type.  
     `avg_fare_per_ride = total_fares/total_rides`  
 
   * Total Fare per City Type  
-    The average fare per driver, similarly, is the total fares divided by total drivers.  And since each series is indexed by city type, the averages will be displayed as a series indexed by city type.
+    The average fare per driver, similarly, is the total fares divided by total drivers.  And since each series is indexed by city type, the averages will be displayed as a series indexed by city type.  
+    `avg_fare_per_driver = total_fares/total_drivers` 
     
   * The series were combined into a new dataframe using Pandas `pd.DataFrame()`.  
-    ```pyber_summary_df = pd.DataFrame({"Total Rides": total_rides,  "Total Drivers": total_drivers,   "Total Fares": total_fares,   "Average Fare per Ride": avg_fare_per_ride,   "Average Fare per Driver": avg_fare_per_driver})```  
+     ```pyber_summary_df = pd.DataFrame({"Total Rides": total_rides,  "Total Drivers": total_drivers,   "Total Fares": total_fares,   "Average Fare per Ride": avg_fare_per_ride,   "Average Fare per Driver": avg_fare_per_driver})```  
     Then pyber_summary was reformatted for presentation purposes.
     
-    
+    The summary shows that there is quite a big difference 
     
     
     There is a description of the differences in ride-sharing data among the different city types. Ride-sharing data include the total rides, total drivers, total fares, average 
