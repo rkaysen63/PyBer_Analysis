@@ -26,14 +26,20 @@ The CEO of PyBer, a ride-sharing app company, has requested visualizations of ri
 <p align="center">
   <img src="analysis/pie_charts.png" width="800">
 </p>
+
+<p align="center">
+  <img src="analysis/box_whiskers.png" width="800">
+</p>
   
 <p align="center">
   <img src="analysis/PyBer_Summary.png" width="900">
 </p>
+    
+* The results show that there is a disparity between different city types in every metric. Rural cities have the least number of ride shares, least number of drivers and the least amount in total fares, while urban has the greatest of these.  Conversely, the average fare per rider and average fare per driver is the greatest in rural cities and least in urban cities.  The number of drivers directly proportional to the number of riders.  As the number of riders increases, so does the demand for drivers.  Fares are inversely proportional.  As the number of riders increases, the number of drivers increases and the fares per ride decrease, i.e. bringing down the fare per rider and the fare per driver.
+    
+  * The ride-share data came from two sources:  city_data.csv and ride_data.csv.  Before any analysis could be performed, the data had to be checked for missing data that would result in errors or a bad analysis. Pandas was imported so that the data sources could be read as Pandas dataframes. The subsequent dataframes, ride_data_df and city_data_df, were then checked for null values and in both cases no null values were found.  Verified clean, the dataframes were combined into a single dataframe, pyber_data_df, which was used, to gather the totals for *PyBer Summary*.
 
-* The ride-share data came from two sources:  city_data.csv and ride_data.csv.  Before any analysis could be performed, the data had to be checked for missing data that would result in errors or a bad analysis. Pandas was imported so that the data sources could be read as Pandas dataframes. The subsequent dataframes, ride_data_df and city_data_df, were then checked for null values and in both cases no null values were found.  Verified clean, the dataframes were combined into a single dataframe, pyber_data_df, which was used, to gather the totals for *PyBer Summary*.
-
-* *PyBer Summary* dataframe, shown in the image above, was created from five Series.
+  * *PyBer Summary* dataframe, shown in the image above, was created from five Series.
   * Total Rides by City Type  
     The total_rides by city series was created using the groupby() function on the pyber_data_df to sort the data by city "type" and count the number of rides, "ride_id", for each city type.  
     `total_rides = pyber_data_df.groupby(["type"]).count()["ride_id"]`
@@ -57,37 +63,15 @@ The CEO of PyBer, a ride-sharing app company, has requested visualizations of ri
   * The series were combined into a new dataframe using Pandas `pd.DataFrame()`.  
      ```pyber_summary_df = pd.DataFrame({"Total Rides": total_rides,  "Total Drivers": total_drivers,   "Total Fares": total_fares,   "Average Fare per Ride": avg_fare_per_ride,   "Average Fare per Driver": avg_fare_per_driver})```  
     Then pyber_summary was reformatted for presentation purposes.
-    
-    The summary shows that there is quite a big difference 
-    
-    
-    There is a description of the differences in ride-sharing data among the different city types. Ride-sharing data include the total rides, total drivers, total fares, average 
-    The pie charts from a previous analysis and the "PyBer Summary
-    
-    
-    
-    
-    
-    fare per ride and driver, and total fare by city type. (7 pt)
+
+<p align="center">
+  <img src="PyBer_Challenge.ipynb" width="900">
+</p>    
+
 
 ## Summary:
 
 There is a statement summarizing three business recommendations to the CEO for addressing any disparities among the city types. (4 pt)
-
-
-
-
-
-Deliverable 1 Requirements
-You will earn a perfect score for Deliverable 1 by completing all requirements below:
-
-The total number of rides for each city type is retrieved. (5 pt)
-The total number of drivers for each city type is retrieved. (5 pt)
-​The sum of the fares for each city type is retrieved. (5 pt)
-​The average fare per ride for each city type is calculated. (5 pt)
-The average fare per driver for each city type is calculated. (5 pt)
-A PyBer summary DataFrame is created. (5 pt)
-The PyBer summary DataFrame is formatted as shown in the example. (5 pt)
 
 Deliverable 2 Requirements
 You will earn a perfect score for Deliverable 2 by completing all requirements below:
