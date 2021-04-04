@@ -95,6 +95,6 @@ One obvious reason for the disparity in ride-share data among city types is popu
 
 1. Increase advertising to local patrons in rural and suburban areas through social media outlets.
 2. Identify peak and off-peak "seasons" and offer incentives such a fare specials to boost use.
-3. Coordinate with event centers, such a concert venues, ball parks, hotels and resorts in underserved areas to develop mutually beneficial relationship to advertise and incentivize in order to boost ride-share to and from events and lodging.
-
-* [Back to the Table of Contents](https://github.com/rkaysen63/PyBer_Analysis/blob/master/README.md#table-of-contents)
+3. Coordinate with event centers, such a concert venues, ball parks, hotels and resorts in underserved areas to develop mutually beneficial relationship to advertise and incentivize in order to boost ride-share to and from events and lodging.  
+  
+[Back to the Table of Contents](https://github.com/rkaysen63/PyBer_Analysis/blob/master/README.md#table-of-contents)
