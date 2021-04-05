@@ -68,7 +68,7 @@ The CEO of PyBer, a ride-sharing app company, has requested visualizations of ri
              "Total Fares": total_fares,   
              "Average Fare per Ride": avg_fare_per_ride,   
              "Average Fare per Driver": avg_fare_per_driver}) 
-    Then pyber_summary was reformatted for presentation purposes.
+  * Then pyber_summary was reformatted for presentation purposes.
 
 <p align="center">
   <img src="analysis/pivot.png" width="900">
@@ -78,7 +78,7 @@ The CEO of PyBer, a ride-sharing app company, has requested visualizations of ri
   <img src="analysis/fare_by_type.png" width="900">
 </p>   
   
-*  Creating a multiple line plot that shows the total weekly fares for each type of city includes using `groupby()`, `reset_index`, and `pivot()` functions.  
+*  The multiple line plot, "Total Fare by City Type" shown above was created using the `groupby()`, `reset_index`, and `pivot()` functions.  
   * Creating type_date_df:  
   A DataFrame, type_date_df, was created using the groupby() function on the "type" and "date" columns of pyber_data_df, and the sum() method was applied on the "fare" column to obtain the total fare amount for each date and time.  In the resulting DataFrame, the "date" and "fare" columns are grouped by the city type, i.e. "Urban", "Suburban", and "Rural", but the city type will only appear once in the "type" column for the entire group rather than as single entries on each row of the DataFrame.  
   `type_date_df = pyber_data_df.groupby(["type", "date"]).sum()[["fare"]]`  
@@ -105,20 +105,25 @@ The CEO of PyBer, a ride-sharing app company, has requested visualizations of ri
     Step 4:  The final version of the DataFrame, weekly_fares_Jan_April_df, was created using the `resample()` and `sum()` functions to combine the dates into weekly bins and to show the sum of the fares for each week.  
     `weekly_fares_Jan_April_df = fares_Jan_April_df.resample('W').sum()`
   
-  * The graph "Total Fare by City Type", displayed above in the "fivethirtyeight" style, was created from weekly_fares_Jan_April_df and saved to the "analysis" folder as "fare_by_type.png".
-        from matplotlib import style  
-        plt.style.use('fivethirtyeight')  
-        weekly_fares = weekly_fares_Jan_April_df.plot(figsize = (20, 6))  
-        weekly_fares.set_title("Total Fare by City Type", fontsize=24)  
-        weekly_fares.set_xlabel("")  
-        weekly_fares.set_ylabel("Fare ($USD)", fontsize=20)  
-        plt.savefig("analysis/fare_by_type.png")  
-        plt.show()  
-        plt.tight_layout()
+  * The graph "Total Fare by City Type", displayed above in the "fivethirtyeight" style, was created from weekly_fares_Jan_April_df and saved to the "analysis" folder as "fare_by_type.png".  
+    
+      `from matplotlib import style  
+      
+          plt.style.use('fivethirtyeight')  
+          weekly_fares = weekly_fares_Jan_April_df.plot(figsize = (20, 6))  
+          weekly_fares.set_title("Total Fare by City Type", fontsize=24)  
+          weekly_fares.set_xlabel("")  
+          weekly_fares.set_ylabel("Fare ($USD)", fontsize=20)  
+          plt.savefig("analysis/fare_by_type.png")  
+          plt.show()  
+          plt.tight_layout()`
 
 ## Summary:
 
-One obvious reason for the disparity in ride-share data among city types is population density, which cannot be helped.  That aside there still may be ways to address the disparities and improve ride-share use in underserved areas.
+One obvious reason for the disparity in ride-share data among city types is population density, which cannot be helped.  Before additional time and money are applied to improving ride-share in underserved areas, further analysis of the results as a percentage of the total population for an area type is  to see how much the disparity is a result of population density.
+
+
+That aside there still may be ways to address the disparities and improve ride-share use in underserved areas.
 
 1. Increase advertising to local patrons in rural and suburban areas through social media outlets.
 2. Identify peak and off-peak "seasons" and offer incentives such a fare specials to boost use.
