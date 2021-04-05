@@ -102,7 +102,7 @@ The CEO of PyBer, a ride-sharing app company, has requested visualizations of ri
     
     Step 4:  The final version of the DataFrame, weekly_fares_Jan_April_df, was created using the `resample()` and `sum()` functions to combine the dates into weekly bins and to show the sum of the fares for each week.  
     `weekly_fares_Jan_April_df = fares_Jan_April_df.resample('W').sum()`  
-    * The graph "Total Fare by City Type", displayed above in the "fivethirtyeight" style, was created from weekly_fares_Jan_April_df and saved to the "analysis" folder as "fare_by_type.png".  
+  * The graph "Total Fare by City Type", displayed above in the "fivethirtyeight" style, was created from weekly_fares_Jan_April_df and saved to the "analysis" folder as "fare_by_type.png".  
           
           from matplotlib import style  
           plt.style.use('fivethirtyeight')  
@@ -116,13 +116,12 @@ The CEO of PyBer, a ride-sharing app company, has requested visualizations of ri
 
 ## Summary:
 
-One obvious reason for the disparity in ride-share data among city types is population density, which cannot be helped.  Before additional time and money are applied to improving ride-share in underserved areas, further analysis of the results as a percentage of the total population for an area type is  to see how much the disparity is a result of population density.
+One obvious reason for the disparity in ride-share data among city types is population density, which cannot be helped.  Before additional time and money are applied to improving ride-share in underserved areas, perhaps the results for each city type could be normalized to account for the disparity in population density and then compared.
 
-
-That aside there still may be ways to address the disparities and improve ride-share use in underserved areas.
+That aside there still may be ways to improve ride-share use in underserved areas.  Some recommendations follow:
 
 1. Increase advertising to local patrons in rural and suburban areas through social media outlets.
-2. Identify peak and off-peak "seasons" and offer incentives such a fare specials to boost use.
-3. Coordinate with event centers, such a concert venues, ball parks, hotels and resorts in underserved areas to develop mutually beneficial relationship to advertise and incentivize in order to boost ride-share to and from events and lodging.  
+2. Identify peak and off-peak "seasons" and offer incentives such a fare specials to boost.
+3. Coordinate with event centers, such a concert venues, ball parks, hotels and resorts in underserved areas to develop mutually beneficial advertising in the app and other social media that will incentivize riders and drivers in order to boost ride-share to and from events and lodging.  
   
 [Back to the Table of Contents](https://github.com/rkaysen63/PyBer_Analysis/blob/master/README.md#table-of-contents)
