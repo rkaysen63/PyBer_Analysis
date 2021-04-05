@@ -120,8 +120,9 @@ One obvious reason for the disparity in ride-share data among city types is popu
 
 That aside there still may be ways to improve ride-share use in underserved areas.  Some recommendations follow:
 
-1. Increase advertising to local patrons in rural and suburban areas through social media outlets.
-2. Identify peak and off-peak "seasons" and offer incentives such a fare specials to boost.
-3. Coordinate with event centers, such a concert venues, ball parks, hotels and resorts in underserved areas to develop mutually beneficial advertising in the app and other social media that will incentivize riders and drivers in order to boost ride-share to and from events and lodging.  
+1. Launch advertising campaign in app and through social mediout outlets to local ride-share customers in rural and suburban areas.
+2. Develop customer survey to understand what drives consumers to use-ride share.  Likewise develop a similar survey for drivers to see what incentives can be offered to draw more drivers to serve underserved areas.
+3. Identify peak and off-peak "seasons" and offer incentives such a fare specials to boost riders.
+4. Coordinate with event centers, museums, theaters, restaurants, cinemas, concert venues, ball parks, hotels and resorts in underserved areas to develop mutually beneficial relationship that will incentivize riders and drivers in order to boost ride-share to and from places of interest and lodging.  
   
 [Back to the Table of Contents](https://github.com/rkaysen63/PyBer_Analysis/blob/master/README.md#table-of-contents)
