@@ -78,7 +78,7 @@ The CEO of PyBer, a ride-sharing app company, has requested visualizations of ri
   <img src="analysis/fare_by_type.png" width="900">
 </p>   
   
-* The multiple line plot, "Total Fare by City Type," shown above indicates that the disparity in total fare by city type where urban cities remains consistent week to week regardless of the fluctuations.  Urban cities have the largest total fare and rural cities have the lowest.  The description below explains how the results that were used to create the multiple line chart were obtained. 
+* It is evident upon reviewing the multiple line plot, "Total Fare by City Type, that the disparity in total fare by city type is consistent from week to week, regardless of fluctuations.  Urban cities generate the largest total fare and rural cities generate the lowest.  The rural cities' total fare at best may be only 20% of the urban cities' total fare.  The method to obtain the results used to make line plot are described below. 
   * Creating type_date_df:  
   A DataFrame, type_date_df, was created using the groupby() function on the "type" and "date" columns of pyber_data_df, and the sum() method was applied on the "fare" column to obtain the total fare amount for each date and time.  In the resulting DataFrame, the "date" and "fare" columns are grouped by the city type, i.e. "Urban", "Suburban", and "Rural", but each city type only appears once in the "type" column for the entire group rather than as single entries on each row of the DataFrame.  
   `type_date_df = pyber_data_df.groupby(["type", "date"]).sum()[["fare"]]`  
