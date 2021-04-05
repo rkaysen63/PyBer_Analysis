@@ -35,28 +35,29 @@ The CEO of PyBer, a ride-sharing app company, has requested visualizations of ri
   <img src="analysis/PyBer_Summary.png" width="900">
 </p>
     
-* The results show that there is a disparity between different city types in every metric. Rural cities have the least number of ride-shares, least number of drivers and the least amount in total fares, while urban has the greatest of these.  Conversely, the average fare per rider and average fare per driver is the greatest in rural cities and least in urban cities.  The number of drivers is directly proportional to the number of riders.  As the number of riders increases, so does the demand for drivers.  Fares are inversely proportional.  As the number of riders and consequently the number of drivers increases, the fares per ride and fare per driver decrease.
+* The results show that there is a disparity between different city types in every metric. Rural cities have the least number of ride-shares, least number of drivers and the least amount in total fares, while urban cities have the greatest of these.  Conversely, the average fare per rider and average fare per driver is the greatest in rural cities and least in urban cities.  The number of drivers is directly proportional to the number of riders.  As the number of riders increases, so does the demand for drivers.  Fares are inversely proportional.  As the number of riders and consequently the number of drivers increases, the fares per ride and fare per driver decrease.
     
   * The ride-share data came from two sources:  city_data.csv and ride_data.csv.  Before any analysis could be performed, the data had to be checked for missing data that would result in errors or a bad analysis. Pandas was imported so that the data sources could be read as Pandas dataframes. The subsequent dataframes, ride_data_df and city_data_df, were then checked for null values and in both cases no null values were found.  Verified clean, the dataframes were combined into a single dataframe, pyber_data_df, which was used, to gather the totals for *PyBer Summary*.
 
-  * *PyBer Summary* dataframe, shown in the image above, was created from five Series.
-  * Total Rides by City Type  
+  * *PyBer Summary* dataframe, shown in the image above, was created from five Series.  
+  
+  * Total Rides by City Type Series  
     The total_rides by city series was created using the `groupby()` function on the pyber_data_df to sort the data by city "type" and count the number of rides, "ride_id", for each city type.  
     `total_rides = pyber_data_df.groupby(["type"]).count()["ride_id"]`
   
-  * Total Drivers by City Type  
+  * Total Drivers by City Type Series  
     The total_drivers by city series was created using the `groupby()` function on the city_data_df to sort the data by city "type" and sum the number of drivers, "driver_count", for each city type.  It is important to note that the original city_data_df was used to sum the driver counts because the merged data_frame included in the driver_count on each row where a city was listed.  Therefore, the sum of "driver_count" for each city type in pyber_data_df would be incorrect because the driver_count by city would be repeated for however many times that city appeared in the data frame.   
     `total_drivers = city_data_df.groupby(["type"]).sum()["driver_count"]`  
   
-  * Total Fares by City Type  
+  * Total Fares by City Type Series  
     The total_fares by city series was created using the `groupby()` function on the pyber_data_df to sort the data by city "type" and sum the fares, "fare", for each city type.  
     `total_fares = pyber_data_df.groupby(["type"]).sum()["fare"]`  
     
-  * Average Fare per Ride per City Type  
+  * Average Fare per Ride per City Type Series  
     The average fare per rider is the total fares divided by total rides.  And since total_fares and total_rides are indexed by city type, the average faress will be displayed as a series indexed by city type.  
     `avg_fare_per_ride = total_fares/total_rides`  
 
-  * Total Fare per City Type  
+  * Total Fare per City Type Series  
     The average fare per driver, similarly, is the total fares divided by total drivers.  And since total_fares and total_drivers are indexed by city type, the average fares will be displayed as a series indexed by city type.  
     `avg_fare_per_driver = total_fares/total_drivers` 
     
