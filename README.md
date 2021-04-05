@@ -69,8 +69,6 @@ The CEO of PyBer, a ride-sharing app company, has requested visualizations of ri
              "Average Fare per Ride": avg_fare_per_ride,   
              "Average Fare per Driver": avg_fare_per_driver}) 
     Then pyber_summary was reformatted for presentation purposes.
-    
-*  Creating a multiple line plot that shows the total weekly fares for each type of city includes using `groupby()`, `reset_index`, and `pivot()` functions.
 
 <p align="center">
   <img src="analysis/pivot.png" width="900">
@@ -80,11 +78,11 @@ The CEO of PyBer, a ride-sharing app company, has requested visualizations of ri
   <img src="analysis/fare_by_type.png" width="900">
 </p>   
   
+*  Creating a multiple line plot that shows the total weekly fares for each type of city includes using `groupby()`, `reset_index`, and `pivot()` functions.  
   * Creating type_date_df:  
-  A DataFrame, type_date_df, was created using the groupby() function on the "type" and "date" columns, and the sum() method was applied on the "fare" column to obtain the total fare amount for each date and time.  The resulting DataFrame shows the "date" and "fare" columns grouped by the city type, i.e. "Urban", "Suburban", and "Rural", but the city type will only appear once in the "type" column for the entire group rather than as single entries on each row of the DataFrame.
+  A DataFrame, type_date_df, was created using the groupby() function on the "type" and "date" columns of pyber_data_df, and the sum() method was applied on the "fare" column to obtain the total fare amount for each date and time.  In the resulting DataFrame, the "date" and "fare" columns are grouped by the city type, i.e. "Urban", "Suburban", and "Rural", but the city type will only appear once in the "type" column for the entire group rather than as single entries on each row of the DataFrame.  
   `type_date_df = pyber_data_df.groupby(["type", "date"]).sum()[["fare"]]`  
-  
-  In order to add an index for pivoting and to return single entries for the city types, the `.reset_index()` function was employed.
+  In order to add an index for pivoting later and to return single entries for the city types, the `.reset_index()` function was employed.
   `type_date_df = type_date_df.reset_index()`
       
   * Creating type_date_df_pivot:  
