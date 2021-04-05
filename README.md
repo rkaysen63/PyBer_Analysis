@@ -78,17 +78,15 @@ The CEO of PyBer, a ride-sharing app company, has requested visualizations of ri
   <img src="analysis/fare_by_type.png" width="900">
 </p>   
   
-*  The multiple line plot, "Total Fare by City Type" shown above was created using the `groupby()`, `reset_index`, and `pivot()` functions.  
+* The multiple line plot, "Total Fare by City Type" shown above was created using the `groupby()`, `reset_index`, and `pivot()` functions.
   * Creating type_date_df:  
   A DataFrame, type_date_df, was created using the groupby() function on the "type" and "date" columns of pyber_data_df, and the sum() method was applied on the "fare" column to obtain the total fare amount for each date and time.  In the resulting DataFrame, the "date" and "fare" columns are grouped by the city type, i.e. "Urban", "Suburban", and "Rural", but the city type will only appear once in the "type" column for the entire group rather than as single entries on each row of the DataFrame.  
   `type_date_df = pyber_data_df.groupby(["type", "date"]).sum()[["fare"]]`  
   In order to add an index for pivoting later and to return single entries for the city types, the `.reset_index()` function was employed.
-  `type_date_df = type_date_df.reset_index()`
-      
+  `type_date_df = type_date_df.reset_index()`  
   * Creating type_date_df_pivot:  
     A DataFrame, type_date_df_pivot, was created with "date" as the index, "type" of city as the columns, and the fares summed by date, "fare", as the values in the columns using the `pivot() function`.  
-    `type_date_df_pivot = type_date_df.pivot(index="date", columns="type", values="fare")`  
-       
+    `type_date_df_pivot = type_date_df.pivot(index="date", columns="type", values="fare")`    
   * Creating weekly_fares_Jan_April_df:  
     Step 1:  Using the loc method, a DataFrame that only includes the dates January 1, 2019 through April 28, 2019 was created from the pivot table, type_date_df_pivot.  
     `fares_Jan_April_df = type_date_df_pivot.loc['2019-01-01':'2019-04-29']`  
@@ -103,12 +101,10 @@ The CEO of PyBer, a ride-sharing app company, has requested visualizations of ri
     DatetimeIndex: 2196 entries, 2019-01-01 00:08:16 to 2019-04-28 19:35:03.  
     
     Step 4:  The final version of the DataFrame, weekly_fares_Jan_April_df, was created using the `resample()` and `sum()` functions to combine the dates into weekly bins and to show the sum of the fares for each week.  
-    `weekly_fares_Jan_April_df = fares_Jan_April_df.resample('W').sum()`
-  
-  * The graph "Total Fare by City Type", displayed above in the "fivethirtyeight" style, was created from weekly_fares_Jan_April_df and saved to the "analysis" folder as "fare_by_type.png".  
-    
-      `from matplotlib import style  
-      
+    `weekly_fares_Jan_April_df = fares_Jan_April_df.resample('W').sum()`  
+    * The graph "Total Fare by City Type", displayed above in the "fivethirtyeight" style, was created from weekly_fares_Jan_April_df and saved to the "analysis" folder as "fare_by_type.png".  
+          
+          from matplotlib import style  
           plt.style.use('fivethirtyeight')  
           weekly_fares = weekly_fares_Jan_April_df.plot(figsize = (20, 6))  
           weekly_fares.set_title("Total Fare by City Type", fontsize=24)  
