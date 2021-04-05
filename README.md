@@ -80,7 +80,7 @@ The CEO of PyBer, a ride-sharing app company, has requested visualizations of ri
   
 * The multiple line plot, "Total Fare by City Type" shown above was created using the `groupby()`, `reset_index`, and `pivot()` functions.
   * Creating type_date_df:  
-  A DataFrame, type_date_df, was created using the groupby() function on the "type" and "date" columns of pyber_data_df, and the sum() method was applied on the "fare" column to obtain the total fare amount for each date and time.  In the resulting DataFrame, the "date" and "fare" columns are grouped by the city type, i.e. "Urban", "Suburban", and "Rural", but the city type will only appear once in the "type" column for the entire group rather than as single entries on each row of the DataFrame.  
+  A DataFrame, type_date_df, was created using the groupby() function on the "type" and "date" columns of pyber_data_df, and the sum() method was applied on the "fare" column to obtain the total fare amount for each date and time.  In the resulting DataFrame, the "date" and "fare" columns are grouped by the city type, i.e. "Urban", "Suburban", and "Rural", but the city type only appears once in the "type" column for the entire group rather than as single entries on each row of the DataFrame.  
   `type_date_df = pyber_data_df.groupby(["type", "date"]).sum()[["fare"]]`  
   In order to add an index for pivoting later and to return single entries for the city types, the `.reset_index()` function was employed.
   `type_date_df = type_date_df.reset_index()`  
