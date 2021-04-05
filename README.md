@@ -80,12 +80,12 @@ The CEO of PyBer, a ride-sharing app company, has requested visualizations of ri
   
 * The multiple line plot, "Total Fare by City Type" shown above was created using the `groupby()`, `reset_index`, and `pivot()` functions.
   * Creating type_date_df:  
-  A DataFrame, type_date_df, was created using the groupby() function on the "type" and "date" columns of pyber_data_df, and the sum() method was applied on the "fare" column to obtain the total fare amount for each date and time.  In the resulting DataFrame, the "date" and "fare" columns are grouped by the city type, i.e. "Urban", "Suburban", and "Rural", but the city type only appears once in the "type" column for the entire group rather than as single entries on each row of the DataFrame.  
+  A DataFrame, type_date_df, was created using the groupby() function on the "type" and "date" columns of pyber_data_df, and the sum() method was applied on the "fare" column to obtain the total fare amount for each date and time.  In the resulting DataFrame, the "date" and "fare" columns are grouped by the city type, i.e. "Urban", "Suburban", and "Rural", but each city type only appears once in the "type" column for the entire group rather than as single entries on each row of the DataFrame.  
   `type_date_df = pyber_data_df.groupby(["type", "date"]).sum()[["fare"]]`  
-  In order to add an index for pivoting later and to return single entries for the city types, the `.reset_index()` function was employed.
+  In order to add an index for pivoting later and to return single entries for the city types, the `.reset_index()` function was employed.  
   `type_date_df = type_date_df.reset_index()`  
   * Creating type_date_df_pivot:  
-    A DataFrame, type_date_df_pivot, was created with "date" as the index, "type" of city as the columns, and the fares summed by date, "fare", as the values in the columns using the `pivot() function`.  
+    A DataFrame pivot table, type_date_df_pivot, was created with "date" as the index, "type" of city as the columns, and the fares summed by date, "fare", as the values in the columns using the `pivot() function`.  
     `type_date_df_pivot = type_date_df.pivot(index="date", columns="type", values="fare")`    
   * Creating weekly_fares_Jan_April_df:  
     Step 1:  Using the loc method, a DataFrame that only includes the dates January 1, 2019 through April 28, 2019 was created from the pivot table, type_date_df_pivot.  
@@ -97,8 +97,8 @@ The CEO of PyBer, a ride-sharing app company, has requested visualizations of ri
     Step 3:  The `DatetimeIndex` was confirmed using `.info()`,  
     `fares_Jan_April_df.info()`  
     
-    which retured information about `fares_Jan_April_df`, that included:  
-    DatetimeIndex: 2196 entries, 2019-01-01 00:08:16 to 2019-04-28 19:35:03.  
+    which retured information about fares_Jan_April_df, that included:  
+    ***DatetimeIndex***: 2196 entries, 2019-01-01 00:08:16 to 2019-04-28 19:35:03, thus verifying that the index is indeed a "Datetime Index."  
     
     Step 4:  The final version of the DataFrame, weekly_fares_Jan_April_df, was created using the `resample()` and `sum()` functions to combine the dates into weekly bins and to show the sum of the fares for each week.  
     `weekly_fares_Jan_April_df = fares_Jan_April_df.resample('W').sum()`  
@@ -112,7 +112,7 @@ The CEO of PyBer, a ride-sharing app company, has requested visualizations of ri
           weekly_fares.set_ylabel("Fare ($USD)", fontsize=20)  
           plt.savefig("analysis/fare_by_type.png")  
           plt.show()  
-          plt.tight_layout()`
+          plt.tight_layout()
 
 ## Summary:
 
@@ -120,9 +120,9 @@ One obvious reason for the disparity in ride-share data among city types is popu
 
 That aside there still may be ways to improve ride-share use in underserved areas.  Some recommendations follow:
 
-1. Launch advertising campaign in app and through social mediout outlets to local ride-share customers in rural and suburban areas.
-2. Develop customer survey to understand what drives consumers to use-ride share.  Likewise develop a similar survey for drivers to see what incentives can be offered to draw more drivers to serve underserved areas.
+1. Launch advertising campaign in app and through social media outlets to ride-share customers in rural and suburban areas.
+2. Develop a customer survey to understand what drives consumers to use-ride share.  Likewise develop a similar survey for drivers to see what incentives can be offered to draw more drivers to serve underserved areas.
 3. Identify peak and off-peak "seasons" and offer incentives such a fare specials to boost riders.
-4. Coordinate with event centers, museums, theaters, restaurants, cinemas, concert venues, ball parks, hotels and resorts in underserved areas to develop mutually beneficial relationship that will incentivize riders and drivers in order to boost ride-share to and from places of interest and lodging.  
+4. Coordinate with event centers, museums, theaters, restaurants, cinemas, concert venues, ball parks, hotels and resorts in underserved areas to develop mutually beneficial relationships that offer incentives to both riders and drivers in order to boost ride-share to and from places of interest and lodging.  
   
 [Back to the Table of Contents](https://github.com/rkaysen63/PyBer_Analysis/blob/master/README.md#table-of-contents)
